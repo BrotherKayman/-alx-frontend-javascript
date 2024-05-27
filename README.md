@@ -1,2 +1,2 @@
-# -alx-frontend-javascript
+# alx-frontend-javascript
 Frontend specialization projects
