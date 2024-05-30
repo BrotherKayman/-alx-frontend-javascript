@@ -29,7 +29,7 @@ export default class Pricing {
 
   set currency(currency) {
     if (!(currency instanceof Currency)) {
-      throw new TypeError('Currency must be an instance of class Currency');
+      throw new TypeError('Currency must be an  of class Currency');
     }
     this._currency = currency;
   }
