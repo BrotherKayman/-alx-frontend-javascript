@@ -3,9 +3,9 @@ import Currency from './3-currency';
 export default class Pricing {
   constructor(amount, currency) {
     if (typeof amount !== 'number') {
-      throw new TypeError('Amount must be a number');
+      throw new TypeError('Amount must be numeric');
     } else if (!(currency instanceof Currency)) {
-      throw new TypeError('Currency must be an instance of class Currency');
+      throw new TypeError('Currency must be from class Currency');
     }
 
     this._amount = amount;
@@ -22,14 +22,14 @@ export default class Pricing {
 
   set amount(amount) {
     if (typeof amount !== 'number') {
-      throw new TypeError('Amount must be a number');
+      throw new TypeError('Amount must be numeric');
     }
     this._amount = amount;
   }
 
   set currency(currency) {
     if (!(currency instanceof Currency)) {
-      throw new TypeError('Currency must be an  of class Currency');
+      throw new TypeError('Currency must be from class Currency');
     }
     this._currency = currency;
   }
@@ -42,7 +42,7 @@ export default class Pricing {
     if (typeof amount !== 'number') {
       throw new TypeError('Amount must be a number');
     } else if (typeof conversionRate !== 'number') {
-      throw new TypeError('Conversion rate must be a number');
+      throw new TypeError('Conversion rate must be numeric');
     }
 
     return amount * conversionRate;
